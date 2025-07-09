@@ -6,130 +6,186 @@
     <title>RemindAI - Smart Reminder Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 2rem;
-            background-color: #f9f9f9;
-            color: #222;
-            line-height: 1.6;
+            padding: 0;
+            background-color: #f2f4f8;
+            color: #1e293b;
         }
-        h1, h2, h3 {
-            color: #1e88e5;
+        header {
+            background-color: #1e88e5;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        main {
+            padding: 2rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
         .section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
             padding: 1.5rem;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+        .section p, .section ul, .section li {
+            font-size: 1rem;
+            line-height: 1.6;
         }
         ul {
             padding-left: 1.5rem;
         }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .comparison-table th, .comparison-table td {
-            border: 1px solid #ccc;
-            padding: 0.75rem;
-            text-align: left;
-        }
-        .comparison-table th {
-            background-color: #e3f2fd;
-        }
         .highlight {
             background-color: #e8f5e9;
-            border-left: 4px solid #66bb6a;
-            padding: 1rem;
-            margin: 1rem 0;
+            border-left: 5px solid #4caf50;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
         }
-        .cta {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2e7d32;
+        table.comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table th, table td {
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+        table th {
+            background-color: #bbdefb;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section {
+                padding: 1rem;
+            }
+            table.comparison-table th, table.comparison-table td {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-<h1>🤖 RemindAI</h1>
-<p><strong>Smart reminders that think ahead and help you prepare — not just remember.</strong></p>
+<header>
+    <h1>🤖 RemindAI</h1>
+    <p>Smart reminders that think ahead and help you prepare — not just remember.</p>
+</header>
+<main>
+    <section class="section">
+        <h2>💡 Real-Life Problems We Forget</h2>
+        <ul>
+            <li>🧳 You remember your flight date, but forget to pack a charger.</li>
+            <li>🎁 You mark a birthday, but forget to buy a gift.</li>
+            <li>🩺 You set a pill reminder, but run out without knowing.</li>
+            <li>📅 You have a deadline, but don’t plan the steps ahead.</li>
+        </ul>
+        <p><strong>RemindAI solves these problems by being proactive and contextual.</strong></p>
+    </section>
 
-<div class="section">
-    <h2>💡 What's the Problem?</h2>
-    <p>We often remember the main event, but forget the important prep.</p>
-    <ul>
-        <li>"Wedding on Friday" ✅</li>
-        <li>"Clean shoes, iron clothes, buy a gift" ❌</li>
-    </ul>
-</div>
+    <section class="section">
+        <h2>✨ What Makes RemindAI Different</h2>
+        <p>It goes beyond basic alerts. It helps you plan and stay ready:</p>
+        <ul>
+            <li><strong>🧠 Context-aware:</strong> Understands your reminder and its needs</li>
+            <li><strong>📝 Suggestive:</strong> Offers checklists, supplies, or subtasks</li>
+            <li><strong>🔁 Follow-ups:</strong> Not just once, but with relevant notifications</li>
+            <li><strong>📦 Tracks stock:</strong> Like counting your pills or supplies</li>
+        </ul>
+    </section>
 
-<div class="section">
-    <h2>✨ What RemindAI Does</h2>
-    <p>It's not just a reminder. It's a smart assistant.</p>
-    <p><strong>Example:</strong> “I have a wedding on Friday.”<br>
-        RemindAI: “Want a checklist?” → Clothes, Shoes, Gift<br>
-        + Wash reminder (3 days before)<br>
-        + Ironing reminder (1 day before)</p>
-</div>
+    <section class="section">
+        <h2>🧪 Example Scenarios</h2>
+        <h3>🎉 Friend’s Wedding</h3>
+        <ul>
+            <li>“I have a wedding on Friday.”</li>
+            <li>RemindAI: “Want a checklist?” → Clothes, Shoes, Gift</li>
+            <li>+ 3 days before: Wash your clothes</li>
+            <li>+ 1 day before: Iron clothes, clean shoes</li>
+        </ul>
 
-<div class="section">
-    <h3>💊 Medicine Tracking</h3>
-    <p>“Take Vitamin D daily. I have 100 pills.”</p>
-    <ul>
-        <li>Daily reminders</li>
-        <li>Tracks remaining pills</li>
-        <li>Warns when stock is low</li>
-        <li>Asks if you'd like to restock</li>
-    </ul>
-</div>
+        <h3>💊 Medicine Intake</h3>
+        <ul>
+            <li>“Remind me to take Vitamin D daily. I have 100 pills.”</li>
+            <li>Tracks your intake, warns before stock runs out</li>
+            <li>Asks if you want to reorder and how many pills are left</li>
+        </ul>
 
-<div class="section">
-    <h2>🌍 Other Use Cases</h2>
-    <ul>
-        <li><strong>✈️ Travel:</strong> Packing list, document check, currency reminders</li>
-        <li><strong>🧽 Home:</strong> Clean oven every 3 months + buy gloves</li>
-        <li><strong>📚 Work:</strong> Break tasks into subtasks with timelines</li>
-        <li><strong>🐾 Pet:</strong> Vet appointments, vaccine tracking, flea meds</li>
-    </ul>
-</div>
+        <h3>✈️ Travel Plans</h3>
+        <ul>
+            <li>“Flight to Paris in 3 weeks.”</li>
+            <li>Packing list suggestions, travel doc checks, accommodation reminders</li>
+        </ul>
+    </section>
 
-<div class="section">
-    <h2>⚡ Why It's Different</h2>
-    <table class="comparison-table">
-        <thead>
-        <tr>
-            <th>❌ Other Apps</th>
-            <th>✅ RemindAI</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Just alert you to an event</td>
-            <td>Understands context</td>
-        </tr>
-        <tr>
-            <td>One reminder, no follow-up</td>
-            <td>Prepares you with related tasks</td>
-        </tr>
-        <tr>
-            <td>No dynamic interaction</td>
-            <td>Asks smart follow-up questions</td>
-        </tr>
-        <tr>
-            <td>Static, reactive</td>
-            <td>Proactive, helpful</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <section class="section">
+        <h2>🧩 Other Use Cases</h2>
+        <ul>
+            <li><strong>🧽 Home:</strong> Deep cleaning schedules + supply suggestions</li>
+            <li><strong>📚 Work/School:</strong> Split tasks, prep alerts, reviews</li>
+            <li><strong>🌱 Plants:</strong> Watering, fertilizing, pest control</li>
+            <li><strong>🐾 Pets:</strong> Vet checkups, vaccinations, meds</li>
+        </ul>
+    </section>
 
-<div class="section highlight">
-    <h2>🤔 What Do You Think?</h2>
-    <p class="cta">Would you use this? What's something you always forget that RemindAI could help with?</p>
-    <p>I’d love your feedback before building this. Let me know your thoughts!</p>
-</div>
+    <section class="section">
+        <h2>📊 Comparison</h2>
+        <table class="comparison-table">
+            <thead>
+            <tr>
+                <th>❌ Other Reminder Apps</th>
+                <th>✅ RemindAI</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Only alert you to an event</td>
+                <td>Understands and prepares for it</td>
+            </tr>
+            <tr>
+                <td>No breakdowns or guidance</td>
+                <td>Suggests steps and supplies</td>
+            </tr>
+            <tr>
+                <td>No stock tracking</td>
+                <td>Keeps count of pills or essentials</td>
+            </tr>
+            <tr>
+                <td>Passive & reactive</td>
+                <td>Proactive & helpful</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 
+    <section class="section highlight">
+        <h2>🙋‍♂️ What Do You Think?</h2>
+        <p><strong>Would you use something like this?</strong></p>
+        <ul>
+            <li>What’s one thing you *always forget* that this could help with?</li>
+            <li>Do you already use a reminder app? What’s missing?</li>
+        </ul>
+        <p>Your feedback can shape RemindAI — thanks for reading! 🚀</p>
+    </section>
+</main>
 </body>
 </html>
