@@ -1,1 +1,1 @@
-# remind-a-
+# remind-ai
